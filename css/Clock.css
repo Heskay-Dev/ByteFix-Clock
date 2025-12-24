@@ -27,13 +27,14 @@
     }
 
     .card{
-      width: min(920px, 96%);
+      width: min(300px, 80%);
       background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,252,0.95));
       border-radius:var(--radius);
       padding:28px;
       box-shadow:var(--shadow);
       display:flex;
-      gap:28px;
+      flex-direction:column;
+      gap:20px;
       align-items:center;
     }
 
@@ -41,7 +42,7 @@
       flex:1 1 320px;
       display:flex;
       flex-direction:column;
-      gap:16px;
+      gap:14px;
     }
 
     .brand {
@@ -199,8 +200,16 @@
 
     /* Responsive */
     @media (max-width:760px){
-      .card{flex-direction:column; align-items:stretch;}
-      .right{width:100%; align-items:flex-start;}
+      .card{flex-direction:column; align-items:center; text-align: center; gap: 20px;}
+      .left,
+      .right{width:100%; align-items:center;}
+      .brand p{font-size: 11px;}
       .brand h1{font-size:16px}
-      .digital{font-size:40px}
+      .brand{justify-content: center; text-align: center;}
+      .digital{font-size:40px; justify-content: center; text-align: center;}
+      .logo{width:48px; height:48px; font-size:20px;}
+      .time{min-width:100%; padding: 10px;}
+      .ampm{font-size:12px; padding:4px 6px;}
+      .seconds{font-size:16px;}
+      .meta{width:100%;}
     }
