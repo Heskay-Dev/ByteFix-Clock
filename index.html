@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="css/Clock.css">
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div>
+        <h1>ByteFix Digital Clock</h1>
+          <p>Fixing Digital, Byte by Byte</p>
+        </div>
+
+      <div class="display" role="region" aria-label="Clock display">
+        <div class="time" id="timeCard">
+          <div class="digital" id="timeString" aria-live="polite">
+            <span id="hhmm">00:00</span>
+            <span class="seconds" id="ss">:00</span>
+            <span class="ampm" id="ampm">AM</span>
+          </div>
+        </div>
+
+        <div class="meta">
+          <div class="date" id="dateString" aria-live="polite">Loading date…</div>
+
+          <div class="controls" aria-hidden="false">
+            <button class="btn" id="toggle24">Use 24-hour</button>
+            <button class="btn secondary" id="toggleTheme">Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="right" aria-label="Clock info">
+      <div class="tz" id="tzString">Timezone: Detecting…</div>
+      <div class="footer-note">Created for ByteFix • Responsive & accessible</div>
+    </aside>
+    
+    <script src="javascript/Clock.js"></script>
+</body>
+</html>
